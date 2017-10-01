@@ -1,0 +1,39 @@
+.feed-page-btn, .profile-page-btn {
+    cursor: pointer;
+}
+.btn-container {
+    text-align: center
+}
+body {
+    background: #222;
+}
+.feed-page .card {
+    margin: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+.feed-page .card img {
+    max-width: 200px;
+}
+.card-block {
+    padding: 1em;
+}
+.card {
+    margin-bottom: 1em;
+}
+.card-text {
+    padding-top: 1em;
+}
+.feed-page {
+    margin: auto;
+}
+.profile-pic {
+    width: 75px;
+    height: 75px;
+}
+.profile-page{
+    margin: auto;
+}
+.profile-page.card{
+    
+}

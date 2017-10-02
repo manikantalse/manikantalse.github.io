@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-    var called=0;
     if (localStorage.getItem("token")) {
         getFacebookInfo(localStorage.getItem("token"));
     }
@@ -16,11 +15,14 @@ $(document).ready(function () {
         getFacebookInfo(token);
     });
 
+    /**
+     * To fetch user information and previous posts of user
+     * @param {string} token 
+     */
     function getFacebookInfo(token) {
         {
             $.ajax("https://graph.facebook.com/me?fields=id,name,birthday,education,email,gender,hometown,relationship_status,location,posts{full_picture,link,message,created_time},picture&access_token=" + token,
                 {
-
                     success: function (response) {
                         console.log(response);
                         setProfilePage(response);
@@ -35,6 +37,10 @@ $(document).ready(function () {
         }
     }
 
+    /**
+     * To set user information in profile page
+     * @param {object} response 
+     */
     function setProfilePage(response) {
 
         $("#myName").text(response.name);
@@ -44,19 +50,24 @@ $(document).ready(function () {
         $("#status").text(response.relationship_status);
         $("#location").text(response.location.name);
         var study = '';
+        // setting educational details
         for (var index in response.education) {
             study += '<p> Studied at ' + response.education[index]['school'].name + '</p>';
         }
         $('.profile-page  .card-block .user-study').html(study);
         var imgPath = '';
         imgPath = response.picture.data.url;
-        console.log(imgPath);
         $('.profile-pic').attr("src", imgPath);
     }
 
+    /**
+     * To set user posts in feed page
+     * @param {object} response 
+     */
     function setFeedPage(response) {
         var name = response.name;
         var post = '';
+        // fetching recent 10 posts
         for (var i = 0; i < 10; i++) {
             post = '<div class="card">' +
                 '<div class="card-block">' +
@@ -71,6 +82,5 @@ $(document).ready(function () {
             post += '</div></div>';
             $(".feed-page").append(post);
         }
-
     }
 });

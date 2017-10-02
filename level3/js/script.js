@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    var called=0;
     if (localStorage.getItem("token")) {
         getFacebookInfo(localStorage.getItem("token"));
     }
@@ -15,9 +16,9 @@ $(document).ready(function () {
         getFacebookInfo(token);
     });
 
-    function getFacebookInfo(accessToken) {
+    function getFacebookInfo(token) {
         {
-            $.ajax("https://graph.facebook.com/me?fields=id,name,birthday,education,email,gender,hometown,relationship_status,location,posts{full_picture,link,message,created_time},picture&access_token=" + accessToken,
+            $.ajax("https://graph.facebook.com/me?fields=id,name,birthday,education,email,gender,hometown,relationship_status,location,posts{full_picture,link,message,created_time},picture&access_token=" + token,
                 {
 
                     success: function (response) {
@@ -28,7 +29,7 @@ $(document).ready(function () {
                     error: function (request, errorType, errorMessage) {
                         console.log(request);
                         console.log(errorType);
-                        alert(request.responseJSON.error.message);
+                        console.log(request.responseJSON.error.message);
                     },
                 });
         }

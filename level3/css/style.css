@@ -34,5 +34,13 @@ body {
 .profile-page{
     margin: auto;
 }
-#token{
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    .profile-page {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    #submitToken {
+        margin-top: 1em;
+    }
 }

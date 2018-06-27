@@ -39,7 +39,7 @@ footer p {
   padding-bottom: 20px;
 }
 
-.about img {
+.about img, .intro-container img {
   margin: auto;  
   border-radius: 50%;
   float: left;
@@ -98,9 +98,12 @@ a {
   color: #fff!important;
 }
 .intro-container{
-  padding-top: 15em;
+  padding-top: 6em;
   padding-bottom: 15em;
   text-align: center;
+}
+.intro-container .img-container{
+  margin-bottom: 2em;
 }
 hr.star-light:after {
   color: #fff;

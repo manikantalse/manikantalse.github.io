@@ -1,0 +1,79 @@
+.chat-messages-left{
+    border-right: 2px solid #ddd;
+}
+.whatsapp-desc-right{
+
+}
+.chat-message-container{
+    padding: 20px;
+}
+.image-container img{
+    border-radius: 50%;
+    height: 200px;
+}
+.image-container, .phone-connected-image{
+    margin: auto;
+    padding: 20px;
+}
+.phone-connected-image{
+    margin-top: 20px;
+}
+.phone-connected-image img{
+    border-radius: 50%;
+    height: 250px;
+}
+.username,.status{
+    margin: auto;
+    padding-top: 20px;
+    background-color: #ddd;
+}
+.username p,.status p{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #00bfa5;
+}
+.upload-picture{
+    margin-top: 20px;
+}
+.upload-picture button{
+    margin: auto;
+    text-align: center;
+}
+.upload-picture input{
+    display: none;
+}
+.legends-message-container, .seshank-message-container{
+    background-color: #ddd;
+}
+.legends-messages, .seshank-messages{
+    background: #fff;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+}
+.legends-messages.me, .seshank-messages.me{
+    background: #DCF8C6;
+    margin-left: 8.33%;
+}
+.legends-message-container h5{
+    color: #00bfa5
+}
+.chat-form input{
+    width: 100%;
+    margin-top: 10px; 
+}
+.msg-container{
+    max-height: 500px;
+    overflow-x: auto;
+}
+.unread{
+    background: #00bfa5;
+}
+@media only screen and (max-width: 600px) {
+    .legends-messages.me, .seshank-messages.me{
+        background: #DCF8C6;
+        margin-left: 0;
+    }
+}

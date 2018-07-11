@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    $('.navbar-toggler').click(function(){
+        $(".navbar-nav").toggleClass('nav-col');
+    });
     $(".header1").click(function(){
         $(".body1").toggle(100);
     });

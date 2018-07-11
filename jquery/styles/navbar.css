@@ -24,13 +24,25 @@ body{
 }
 .bg-primary{
     background-color: #007bff!important; 
+    padding: 5px;
 }
 .container{
-    width: 1200px;
     margin: auto;
 }
-@media only screen and (min-width: 600px) {
+.navbar-toggler{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
     .navbar-toggler{
+        display: block;
+        cursor: pointer;
+    }
+    .navbar-nav{
         display: none;
+    }
+    .nav-col{
+        display: flex;
+        flex-flow: column;
+        height: 120px;
     }
 }

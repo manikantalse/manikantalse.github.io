@@ -9,17 +9,21 @@
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
     z-index: 2; 
-    cursor: pointer;
 }
 .modal-btn{
     background: #007bff;
-    margin-top: 2rem;
     color: #fff;
     padding: 5px;
     border-radius: 5px;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+}
+.close,.modal-close,.save-changes,.modal-btn{
+    cursor: pointer;
 }
 .modal-close{
-    background: #007bff;
+    background: #545b62;
     margin-top: 2rem;
     color: #fff;
     padding: 5px;
@@ -59,4 +63,7 @@
 }
 .modal-footer{
     text-align: right;
+}
+.modal-header, .modal-body{
+    border-bottom: 1px solid #ddd;
 }

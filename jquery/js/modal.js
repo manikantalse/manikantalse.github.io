@@ -1,6 +1,19 @@
 $(document).ready(function(){
-    $(".click").click(function(){
+    $(".modal-btn").click(function(){
         //alert("hello");
         $("#overlay").show();
     });
+    $(".close").click(function(){
+        //alert("hello");
+        $("#overlay").hide();
+    });
+    $(".modal-close").click(function(){
+        //alert("hello");
+        $("#overlay").hide();
+    });
+    $(".save-changes").click(function(){
+        //alert("hello");
+        $("#overlay").hide();
+    });
+    
 });

@@ -1,0 +1,11 @@
+$(document).ready(function(){
+    $(".header1").click(function(){
+        $(".body1").toggle(100);
+    });
+    $(".header2").click(function(){
+        $(".body2").toggle(100);
+    });
+    $(".header3").click(function(){
+        $(".body3").toggle(100);
+    });
+});

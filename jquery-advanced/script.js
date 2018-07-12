@@ -66,13 +66,20 @@ let getAllDetails = (url) => {
 
             // $('#dataSection').css('display', 'block');
 
-            console.log(response);
-            alert(response.Search[0].Poster);
-            if(response.Search[0].Poster != null || response.Search[0].Poster != undefined){
-                $(".card-img-top").attr("src", response.Search[0].Poster)
-            } else{
-                $(".card-img-top").attr("src", 'omdb.png')
-            }
+                if(response.Search[0].Poster != null || response.Search[0].Poster != undefined || response.Search[0].Poster == 'NA'){
+                    $(".card-img-top").attr("src", response.Search[0].Poster)
+                } else{
+                    $(".card-img-top").attr("src", 'omdb.png');
+                }
+    
+                $(".card-title").append(response.Search[0].Title);
+    
+                $(".card-text").append('Year: ' + response.Search[0].Year);
+                $(".card-text").append('\nType: ' + response.Search[0].Type);
+            
+                
+    
+
             
 
             // $('#userName').append(response.name);
@@ -86,7 +93,7 @@ let getAllDetails = (url) => {
 
 
         }, error: (err) => {
-
+            $(".card-text").append("Movie not found");
             console.log(err.responseJSON.error.message);
 
         }

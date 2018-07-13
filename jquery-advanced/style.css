@@ -4,3 +4,9 @@ form{
     display: block;
     text-align: center;
 }
+.error{
+    color: red;
+}
+.card{
+    margin: auto;
+}

@@ -6,14 +6,17 @@ var Youtube = /** @class */ (function () {
         this.getViewCount = function () {
             return _this.viewCount;
         };
-        this.getlikes = function () {
+        this.getLikes = function () {
             return _this.likes;
         };
-        this.getdislikes = function () {
+        this.getDislikes = function () {
             return _this.dislikes;
         };
-        this.getsubscribers = function () {
+        this.getSubscribers = function () {
             return _this.subscribers;
+        };
+        this.getRelatedVideos = function () {
+            return "fetching related videos...";
         };
         this.videoTitle = videoTitle;
         this.viewCount = viewCount;
@@ -25,5 +28,13 @@ var Youtube = /** @class */ (function () {
 }()); // end class 
 var video = new Youtube("Edwisor", 2000, 100, 2, 500);
 var views = video.getViewCount();
-var likes = video.getlikes();
-console.log("Number of views:" + views);
+var likes = video.getLikes();
+var dislikes = video.getDislikes();
+var subscribers = video.getSubscribers();
+var relatedVideos = video.getRelatedVideos();
+console.log("-------- Youtube ----------");
+console.log("Number of views: " + views);
+console.log("Number of likes: " + likes);
+console.log("Number of dislikes: " + dislikes);
+console.log("Number of subscribers: " + subscribers);
+console.log("Related videos: " + relatedVideos);
